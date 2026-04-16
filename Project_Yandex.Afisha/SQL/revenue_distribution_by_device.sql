@@ -1,3 +1,11 @@
+-- Задача: Для заказов в рублях вычислите распределение выручки и количества заказов по типу устройства device_type_canonical. Результат должен включать поля:
+-- тип устройства device_type_canonical;
+-- общая выручка с заказов total_revenue;
+-- количество заказов total_orders;
+-- средняя стоимость заказа avg_revenue_per_order;
+-- доля выручки для каждого устройства от общего значения revenue_share, округлённая до трёх знаков после точки.
+--Результат отсортируйте по убыванию значения в поле revenue_share.
+
 WITH set_config_precode AS (
   SELECT set_config('synchronize_seqscans', 'off', true)
 )
