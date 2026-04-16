@@ -5,4 +5,4 @@ SELECT currency_code,
        COUNT(DISTINCT(user_id)) AS total_users
 FROM afisha.purchases
 GROUP BY currency_code
-ORDER BY total_revenue DESC
+ORDER BY total_revenue DESC;
