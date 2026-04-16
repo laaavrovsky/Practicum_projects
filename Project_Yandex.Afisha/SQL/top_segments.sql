@@ -1,3 +1,12 @@
+-- Выведите топ-7 регионов по значению общей выручки, включив только заказы за рубли. Результат должен включать поля:
+-- название региона region_name;
+-- суммарная выручка total_revenue;
+-- число заказов total_orders;
+-- уникальное число клиентов total_users;
+-- количество проданных билетов total_tickets;
+-- средняя выручка одного билета one_ticket_cost.
+-- Результат отсортируйте по убыванию значения в поле total_revenue.
+
 SELECT region_name,
        SUM(revenue) AS total_revenue,
        COUNT(order_id) AS total_orders,
