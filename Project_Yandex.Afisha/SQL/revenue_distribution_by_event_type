@@ -10,4 +10,4 @@ FROM afisha.purchases AS p
 JOIN afisha.events AS e ON p.event_id = e.event_id
 WHERE currency_code = 'rub'
 GROUP BY event_type_main
-ORDER BY total_orders DESC;
+ORDER BY total_orders DESC
