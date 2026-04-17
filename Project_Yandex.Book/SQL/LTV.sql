@@ -8,8 +8,8 @@ WITH user_months AS (
     SELECT DISTINCT ba.puid,
                     bg.usage_geo_id_name AS city,
                     DATE_TRUNC('month', ba.msk_business_dt_str) AS month
-    FROM bookmate.audition ba
-    JOIN bookmate.geo bg ON ba.usage_geo_id = bg.usage_geo_id
+    FROM bookmate.audition AS ba
+    JOIN bookmate.geo AS bg ON ba.usage_geo_id = bg.usage_geo_id
     WHERE bg.usage_geo_id_name IN ('Москва', 'Санкт-Петербург')
 ),
 user_revenue AS (
