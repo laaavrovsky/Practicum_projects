@@ -9,33 +9,22 @@ WITH cohort AS (
     FROM bookmate.audition
     WHERE msk_business_dt_str = DATE '2024-12-02'
 ),
-
 user_activity AS (
-    SELECT
-        a.puid,
-        a.msk_business_dt_str,
-        a.msk_business_dt_str - DATE '2024-12-02' AS day_since_install
-    FROM bookmate.audition a
-    JOIN cohort c
-        ON a.puid = c.puid
+    SELECT a.puid,
+           a.msk_business_dt_str,
+           a.msk_business_dt_str - DATE '2024-12-02' AS day_since_install
+    FROM bookmate.audition AS a
+    JOIN cohort AS c ON a.puid = c.puid
     WHERE a.msk_business_dt_str >= DATE '2024-12-02'
 ),
-
 retention AS (
-    SELECT
-        day_since_install,
-        COUNT(DISTINCT puid) AS retained_users
+    SELECT day_since_install,
+           COUNT(DISTINCT puid) AS retained_users
     FROM user_activity
     GROUP BY day_since_install
 )
-
-SELECT
-    day_since_install,
-    retained_users,
-    ROUND(
-        retained_users * 1.0 /
-        MAX(retained_users) OVER (),
-        2
-    ) AS retention_rate
+SELECT day_since_install,
+       retained_users,
+       ROUND(retained_users * 1.0 / MAX(retained_users) OVER (), 2) AS retention_rate
 FROM retention
 ORDER BY day_since_install;
