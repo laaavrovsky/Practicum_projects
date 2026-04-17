@@ -57,7 +57,7 @@
 
 Дашборд позволяет отслеживать изменения в продажах и быстро находить точки роста продукта.
 
-📸 Превью:
+Превью:
 ![Overview](DataLens/overview.png)
 ![Revenue dynamics](DataLens/revenue_dynamics.png)
 
