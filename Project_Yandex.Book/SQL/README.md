@@ -26,9 +26,9 @@
 
 ## Структура:
 
-* `MAU_Authors.sql` — расчёт MAU авторов
-* `MAU_Content.sql` — расчёт MAU произведений
-* `Retention_Rate.sql` — анализ удержания пользователей
-* `LTV.sql` — расчёт LTV по городам
-* `Average_Revenue.sql` — выручка на час потребления контента
+* `MAU_Authors.sql` - расчёт MAU авторов
+* `MAU_Content.sql` - расчёт MAU произведений
+* `Retention_Rate.sql` - анализ удержания пользователей
+* `LTV.sql` - расчёт LTV по городам
+* `Average_Revenue.sql` - выручка на час потребления контента
 
