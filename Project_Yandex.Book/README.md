@@ -52,8 +52,8 @@
 
 ## Стек:
 
-* SQL — расчёт продуктовых метрик
-* Python (`pandas`, `numpy`, `matplotlib`, `seaborn`, `scipy`) — анализ данных и статистика
+* SQL - расчёт продуктовых метрик
+* Python (`pandas`, `numpy`, `matplotlib`, `seaborn`, `scipy`) - анализ данных и статистика
 
 ## Результат:
 
