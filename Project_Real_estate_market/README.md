@@ -61,9 +61,6 @@
 ## Превью дашборда:
 
 ![Overview](DataLens/overview.png)
-![Seasonality](DataLens/seasonality.png)
-![Top fast sales](DataLens/top_fast_sales.png)
-![SPB vs regions](DataLens/spb_vs_regions.png)
 
 ## Стек:
 
